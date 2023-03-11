@@ -4,7 +4,7 @@
       <Card
         :loading="loading"
         :title="item.title"
-        class="md:w-1/4 w-full !md:mt-0"
+        class="md:w-1/3 w-full !md:mt-0"
         :class="{ '!md:mr-4': index + 1 < 4, '!mt-4': index > 0 }"
       >
         <template #extra>

@@ -1,10 +1,10 @@
 {
-  "name": "vben-admin",
+  "name": "smart_office",
   "version": "1.0.3",
   "author": {
-    "name": "xingyu4j",
-    "email": "xingyu4j@vip.qq.com",
-    "url": "https://gitee.com/xingyuv"
+    "name": "luciano",
+    "email": "953627561@qq.com",
+    "url": "https://github.com/NEWDSA"
   },
   "scripts": {
     "commit": "czg",

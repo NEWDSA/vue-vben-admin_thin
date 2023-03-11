@@ -66,19 +66,19 @@ const setting: ProjectConfig = {
     // Whether to enable the lock screen function
     useLockPage: true,
     // Whether to show the full screen button
-    showFullScreen: true,
+    showFullScreen: false,
     // Whether to show the document button
-    showDoc: true,
+    showDoc: false,
     // Whether to show the notification button
     showNotice: true,
     // Whether to display the menu search
-    showSearch: true
+    showSearch: false
   },
 
   // Menu configuration
   menuSetting: {
     // sidebar menu bg color
-    bgColor: SIDE_BAR_BG_COLOR_LIST[0],
+    bgColor: SIDE_BAR_BG_COLOR_LIST[3],
     //  Whether to fix the left menu
     fixed: true,
     // Menu collapse
@@ -157,7 +157,7 @@ const setting: ProjectConfig = {
   lockTime: 0,
 
   // Whether to show breadcrumbs
-  showBreadCrumb: true,
+  showBreadCrumb: false,
 
   // Whether to show the breadcrumb icon
   showBreadCrumbIcon: false,

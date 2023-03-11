@@ -29,7 +29,7 @@ const props = defineProps({
    */
   alwaysShowTitle: { type: Boolean }
 })
-
+console.log(props.showTitle, 'rerer')
 const { prefixCls } = useDesign('app-logo')
 const { getCollapsedShowTitle } = useMenuSetting()
 const userStore = useUserStore()

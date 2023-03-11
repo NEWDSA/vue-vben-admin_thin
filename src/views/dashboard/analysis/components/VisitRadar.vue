@@ -1,5 +1,5 @@
 <template>
-  <Card title="转化率" :loading="loading">
+  <Card title="销售额" :loading="loading">
     <div ref="chartRef" :style="{ width, height }"></div>
   </Card>
 </template>
@@ -24,62 +24,29 @@ watch(
       return
     }
     setOptions({
-      legend: {
-        bottom: 0,
-        data: ['访问', '购买']
+      xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
       },
-      tooltip: {},
-      radar: {
-        radius: '60%',
-        splitNumber: 8,
-        indicator: [
-          {
-            name: '电脑'
-          },
-          {
-            name: '充电器'
-          },
-          {
-            name: '耳机'
-          },
-          {
-            name: '手机'
-          },
-          {
-            name: 'Ipad'
-          },
-          {
-            name: '耳机'
+      title: {
+        text: '{a|159,9} {b|1590}',
+        textStyle: {
+          rich: {
+            a: {},
+            b: {}
           }
-        ]
+        }
+      },
+      yAxis: {
+        type: 'value'
       },
       series: [
         {
-          type: 'radar',
-          symbolSize: 0,
-          areaStyle: {
-            shadowBlur: 0,
-            shadowColor: 'rgba(0,0,0,.2)',
-            shadowOffsetX: 0,
-            shadowOffsetY: 10,
-            opacity: 1
-          },
-          data: [
-            {
-              value: [90, 50, 86, 40, 50, 20],
-              name: '访问',
-              itemStyle: {
-                color: '#b6a2de'
-              }
-            },
-            {
-              value: [70, 75, 70, 76, 20, 85],
-              name: '购买',
-              itemStyle: {
-                color: '#5ab1ef'
-              }
-            }
-          ]
+          data: [150, 230, 224, 218, 135, 147, 260],
+          type: 'line',
+          showSymbol: false,
+          animationEasing: 'bounceInOut',
+          animationDuration: 1000
         }
       ]
     })
@@ -87,3 +54,8 @@ watch(
   { immediate: true }
 )
 </script>
+<style lang="less" scoped>
+::v-deep(.ant-card-head) {
+  border-bottom: none;
+}
+</style>
